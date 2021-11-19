@@ -8,9 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/mosta/CLionProjects/MatrixMultiplication/FilesHandler/Sources/TxtFileLoader.c" "C:/Users/mosta/CLionProjects/MatrixMultiplication/cmake-build-debug/CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj"
-  "C:/Users/mosta/CLionProjects/MatrixMultiplication/Lists/Sources/Vector.c" "C:/Users/mosta/CLionProjects/MatrixMultiplication/cmake-build-debug/CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj"
-  "C:/Users/mosta/CLionProjects/MatrixMultiplication/Strings/Sources/String.c" "C:/Users/mosta/CLionProjects/MatrixMultiplication/cmake-build-debug/CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj"
   "C:/Users/mosta/CLionProjects/MatrixMultiplication/main.c" "C:/Users/mosta/CLionProjects/MatrixMultiplication/cmake-build-debug/CMakeFiles/MatrixMultiplication.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

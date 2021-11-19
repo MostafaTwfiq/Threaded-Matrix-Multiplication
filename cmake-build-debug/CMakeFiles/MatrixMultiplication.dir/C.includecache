@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mosta/CLionProjects/MatrixMultiplication/FilesHandler/Headers/TxtFileLoader.h
-stdio.h
--
-
-C:/Users/mosta/CLionProjects/MatrixMultiplication/Lists/Headers/Vector.h
-
-C:/Users/mosta/CLionProjects/MatrixMultiplication/Strings/Headers/String.h
-stdio.h
--
-
 C:/Users/mosta/CLionProjects/MatrixMultiplication/main.c
 stdio.h
 -
@@ -23,10 +13,8 @@ time.h
 -
 stdlib.h
 -
-Strings/Headers/String.h
-C:/Users/mosta/CLionProjects/MatrixMultiplication/Strings/Headers/String.h
-Lists/Headers/Vector.h
-C:/Users/mosta/CLionProjects/MatrixMultiplication/Lists/Headers/Vector.h
-FilesHandler/Headers/TxtFileLoader.h
-C:/Users/mosta/CLionProjects/MatrixMultiplication/FilesHandler/Headers/TxtFileLoader.h
+stdint.h
+-
+string.h
+-
 

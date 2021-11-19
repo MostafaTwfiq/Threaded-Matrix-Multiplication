@@ -76,30 +76,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/FilesHandler/Headers/TxtFileLoader.h">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/FilesHandler/Sources/TxtFileLoader.c">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/Lists/Headers/Vector.h">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/Lists/Sources/Vector.c">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/Strings/Headers/String.h">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/Strings/Sources/String.c">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/System/ErrorCode.h">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
-		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/System/Utils.h">
-			<Option target="MatrixMultiplication"/>
-		</Unit>
 		<Unit filename="C:/Users/mosta/CLionProjects/MatrixMultiplication/main.c">
 			<Option target="MatrixMultiplication"/>
 		</Unit>

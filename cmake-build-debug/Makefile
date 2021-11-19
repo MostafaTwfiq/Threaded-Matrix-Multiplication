@@ -128,78 +128,6 @@ MatrixMultiplication/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/build
 .PHONY : MatrixMultiplication/fast
 
-FilesHandler/Sources/TxtFileLoader.obj: FilesHandler/Sources/TxtFileLoader.c.obj
-.PHONY : FilesHandler/Sources/TxtFileLoader.obj
-
-# target to build an object file
-FilesHandler/Sources/TxtFileLoader.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj
-.PHONY : FilesHandler/Sources/TxtFileLoader.c.obj
-
-FilesHandler/Sources/TxtFileLoader.i: FilesHandler/Sources/TxtFileLoader.c.i
-.PHONY : FilesHandler/Sources/TxtFileLoader.i
-
-# target to preprocess a source file
-FilesHandler/Sources/TxtFileLoader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.i
-.PHONY : FilesHandler/Sources/TxtFileLoader.c.i
-
-FilesHandler/Sources/TxtFileLoader.s: FilesHandler/Sources/TxtFileLoader.c.s
-.PHONY : FilesHandler/Sources/TxtFileLoader.s
-
-# target to generate assembly for a file
-FilesHandler/Sources/TxtFileLoader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.s
-.PHONY : FilesHandler/Sources/TxtFileLoader.c.s
-
-Lists/Sources/Vector.obj: Lists/Sources/Vector.c.obj
-.PHONY : Lists/Sources/Vector.obj
-
-# target to build an object file
-Lists/Sources/Vector.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj
-.PHONY : Lists/Sources/Vector.c.obj
-
-Lists/Sources/Vector.i: Lists/Sources/Vector.c.i
-.PHONY : Lists/Sources/Vector.i
-
-# target to preprocess a source file
-Lists/Sources/Vector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.i
-.PHONY : Lists/Sources/Vector.c.i
-
-Lists/Sources/Vector.s: Lists/Sources/Vector.c.s
-.PHONY : Lists/Sources/Vector.s
-
-# target to generate assembly for a file
-Lists/Sources/Vector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.s
-.PHONY : Lists/Sources/Vector.c.s
-
-Strings/Sources/String.obj: Strings/Sources/String.c.obj
-.PHONY : Strings/Sources/String.obj
-
-# target to build an object file
-Strings/Sources/String.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj
-.PHONY : Strings/Sources/String.c.obj
-
-Strings/Sources/String.i: Strings/Sources/String.c.i
-.PHONY : Strings/Sources/String.i
-
-# target to preprocess a source file
-Strings/Sources/String.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.i
-.PHONY : Strings/Sources/String.c.i
-
-Strings/Sources/String.s: Strings/Sources/String.c.s
-.PHONY : Strings/Sources/String.s
-
-# target to generate assembly for a file
-Strings/Sources/String.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MatrixMultiplication.dir\build.make CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.s
-.PHONY : Strings/Sources/String.c.s
-
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -233,15 +161,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... MatrixMultiplication
-	@echo ... FilesHandler/Sources/TxtFileLoader.obj
-	@echo ... FilesHandler/Sources/TxtFileLoader.i
-	@echo ... FilesHandler/Sources/TxtFileLoader.s
-	@echo ... Lists/Sources/Vector.obj
-	@echo ... Lists/Sources/Vector.i
-	@echo ... Lists/Sources/Vector.s
-	@echo ... Strings/Sources/String.obj
-	@echo ... Strings/Sources/String.i
-	@echo ... Strings/Sources/String.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

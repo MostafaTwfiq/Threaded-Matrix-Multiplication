@@ -78,64 +78,19 @@ CMakeFiles/MatrixMultiplication.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MatrixMultiplication.dir/main.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mosta\CLionProjects\MatrixMultiplication\main.c -o CMakeFiles\MatrixMultiplication.dir\main.c.s
 
-CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj: CMakeFiles/MatrixMultiplication.dir/flags.make
-CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj: ../Strings/Sources/String.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mosta\CLionProjects\MatrixMultiplication\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MatrixMultiplication.dir\Strings\Sources\String.c.obj -c C:\Users\mosta\CLionProjects\MatrixMultiplication\Strings\Sources\String.c
-
-CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mosta\CLionProjects\MatrixMultiplication\Strings\Sources\String.c > CMakeFiles\MatrixMultiplication.dir\Strings\Sources\String.c.i
-
-CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mosta\CLionProjects\MatrixMultiplication\Strings\Sources\String.c -o CMakeFiles\MatrixMultiplication.dir\Strings\Sources\String.c.s
-
-CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj: CMakeFiles/MatrixMultiplication.dir/flags.make
-CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj: ../Lists/Sources/Vector.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mosta\CLionProjects\MatrixMultiplication\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MatrixMultiplication.dir\Lists\Sources\Vector.c.obj -c C:\Users\mosta\CLionProjects\MatrixMultiplication\Lists\Sources\Vector.c
-
-CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mosta\CLionProjects\MatrixMultiplication\Lists\Sources\Vector.c > CMakeFiles\MatrixMultiplication.dir\Lists\Sources\Vector.c.i
-
-CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mosta\CLionProjects\MatrixMultiplication\Lists\Sources\Vector.c -o CMakeFiles\MatrixMultiplication.dir\Lists\Sources\Vector.c.s
-
-CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj: CMakeFiles/MatrixMultiplication.dir/flags.make
-CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj: ../FilesHandler/Sources/TxtFileLoader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mosta\CLionProjects\MatrixMultiplication\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\MatrixMultiplication.dir\FilesHandler\Sources\TxtFileLoader.c.obj -c C:\Users\mosta\CLionProjects\MatrixMultiplication\FilesHandler\Sources\TxtFileLoader.c
-
-CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mosta\CLionProjects\MatrixMultiplication\FilesHandler\Sources\TxtFileLoader.c > CMakeFiles\MatrixMultiplication.dir\FilesHandler\Sources\TxtFileLoader.c.i
-
-CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mosta\CLionProjects\MatrixMultiplication\FilesHandler\Sources\TxtFileLoader.c -o CMakeFiles\MatrixMultiplication.dir\FilesHandler\Sources\TxtFileLoader.c.s
-
 # Object files for target MatrixMultiplication
 MatrixMultiplication_OBJECTS = \
-"CMakeFiles/MatrixMultiplication.dir/main.c.obj" \
-"CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj" \
-"CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj" \
-"CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj"
+"CMakeFiles/MatrixMultiplication.dir/main.c.obj"
 
 # External object files for target MatrixMultiplication
 MatrixMultiplication_EXTERNAL_OBJECTS =
 
 MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/main.c.obj
-MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/Strings/Sources/String.c.obj
-MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/Lists/Sources/Vector.c.obj
-MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/FilesHandler/Sources/TxtFileLoader.c.obj
 MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/build.make
 MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/linklibs.rsp
 MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/objects1.rsp
 MatrixMultiplication.exe: CMakeFiles/MatrixMultiplication.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mosta\CLionProjects\MatrixMultiplication\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable MatrixMultiplication.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mosta\CLionProjects\MatrixMultiplication\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable MatrixMultiplication.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MatrixMultiplication.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
