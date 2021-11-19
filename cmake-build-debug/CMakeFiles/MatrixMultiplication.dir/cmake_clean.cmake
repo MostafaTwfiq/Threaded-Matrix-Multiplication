@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MatrixMultiplication.dir/main.c.obj"
-  "MatrixMultiplication.exe"
-  "MatrixMultiplication.exe.manifest"
+  "CMakeFiles/MatrixMultiplication.dir/main.c.o"
+  "MatrixMultiplication"
   "MatrixMultiplication.pdb"
-  "libMatrixMultiplication.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

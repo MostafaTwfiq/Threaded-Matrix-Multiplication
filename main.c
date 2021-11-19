@@ -206,7 +206,7 @@ Vector *txtLoaderReadFileLines(TxtFileLoader *txtFileLoader) {
             continue;
         }
 
-        stringAppendChar(vectorGet(linesVector, stringIndex), c);
+        stringAppendChar((String *)vectorGet(linesVector, stringIndex), c);
 
     }
 
@@ -357,6 +357,30 @@ void vectorAdd(Vector *list, void *item) {
 
 }
 
+/** This function will take the vector address as a parameter,
+ * then it will return the length of the vector.
+ *
+ * @param list the vector address
+ * @return it will return the number of items in the vector
+ */
+
+int vectorGetLength(Vector *list) {
+
+    if (list == NULL) {
+#ifdef C_DATASTRUCTURES_ERRORSTESTSTRUCT_H
+        ERROR_TEST->errorCode = NULL_POINTER;
+        return -1;
+#else
+        fprintf(stderr, NULL_POINTER_MESSAGE, "vector", "vector data structure");
+        exit(NULL_POINTER);
+#endif
+
+    }
+
+    return list->count;
+
+}
+
 
 /** This function will take the vector address, and the index as a parameters,
  * then it will return the item at the given index.
@@ -443,7 +467,7 @@ void destroyVector(void *list) {
 
     }
 
-    clearVector(list);
+    clearVector((Vector *)list);
     free(((Vector *) list)->arr);
     free(list);
 
@@ -521,7 +545,7 @@ void stringAppendChar(String *string, char c) {
 
     if (string->count == string->length) {
         string->length *= 2;
-        string->string = realloc(string->string, sizeof(char) * (string->length + 1));
+        string->string = (char *) realloc(string->string, sizeof(char) * (string->length + 1));
         if (string->string == NULL) {
 #ifdef C_DATASTRUCTURES_ERRORSTESTSTRUCT_H
             ERROR_TEST->errorCode = FAILED_REALLOCATION;
@@ -852,13 +876,13 @@ Vector *stringSplit(String *string, char *splitCharacters) {
 
         if (charArrContains(splitCharacters, stringGet(string, i))) {
 
-            if (stringGetLength(vectorGet(stringsVector, vectorGetLength(stringsVector) - 1)) != 0)
+            if (stringGetLength((String *)vectorGet(stringsVector, vectorGetLength(stringsVector) - 1)) != 0)
                 vectorAdd(stringsVector, stringInitialization(5));
 
             continue;
         }
 
-        stringAppendChar(vectorGet(stringsVector, vectorGetLength(stringsVector) - 1), stringGet(string, i));
+        stringAppendChar((String *) vectorGet(stringsVector, vectorGetLength(stringsVector) - 1), stringGet(string, i));
 
     }
 
@@ -931,7 +955,7 @@ int main() {
     clock_t begin, end;
     int m1R, m1C, m2R, m2C, currThread;
 
-    char filePath[] = "C:\\Users\\mosta\\CLionProjects\\MatrixMultiplication\\input.txt";
+    char filePath[] = "input.txt";
     TxtFileLoader *txtFileLoader = txtFileLoaderInitialization(filePath);
     Vector *fileLines = txtLoaderReadFileLines(txtFileLoader);
     if (vectorGetLength(fileLines) < 4) {
@@ -939,7 +963,7 @@ int main() {
         exit(-1);
     }
 
-    String *fMatrixSizeLine = vectorGet(fileLines, 0);
+    String *fMatrixSizeLine = (String *) vectorGet(fileLines, 0);
     Vector *fMatrixSizeSplitted = stringSplit(fMatrixSizeLine, " ");
     if (vectorGetLength(fMatrixSizeSplitted) != 2) {
         fprintf(stderr, "The file isn't valid.");
@@ -948,13 +972,13 @@ int main() {
 
     m1R = atoi(((String *) vectorGet(fMatrixSizeSplitted, 0))->string);
     m1C = atoi(((String *) vectorGet(fMatrixSizeSplitted, 1))->string);
-    destroyString(fMatrixSizeLine);
+
     destroyVector(fMatrixSizeSplitted);
     Vector *splittedLine;
 
     int fMatrix[m1R][m1C];
     for (int i = 1; i <= m1R; i++) {
-        splittedLine = stringSplit(vectorGet(fileLines, i), " ");
+        splittedLine = stringSplit((String *) vectorGet(fileLines, i), " ");
         if (vectorGetLength(splittedLine) != m1C) {
             fprintf(stderr, "The file isn't valid.");
             exit(-1);
@@ -966,7 +990,7 @@ int main() {
     }
 
 
-    String *sMatrixSizeLine = vectorGet(fileLines, m1R + 1);
+    String *sMatrixSizeLine = (String *) vectorGet(fileLines, m1R + 1);
     Vector *sMatrixSizeSplitted = stringSplit(sMatrixSizeLine, " ");
     if (vectorGetLength(sMatrixSizeSplitted) != 2) {
         fprintf(stderr, "The file isn't valid.");
@@ -975,12 +999,12 @@ int main() {
 
     m2R = atoi(((String *) vectorGet(sMatrixSizeSplitted, 0))->string);
     m2C = atoi(((String *) vectorGet(sMatrixSizeSplitted, 1))->string);
-    destroyString(sMatrixSizeLine);
+
     destroyVector(sMatrixSizeSplitted);
 
     int sMatrix[m2R][m2C];
     for (int i = m1R + 2; i <= m2R + m1R + 1; i++) {
-        splittedLine = stringSplit(vectorGet(fileLines, i), " ");
+        splittedLine = stringSplit((String  *) vectorGet(fileLines, i), " ");
         if (vectorGetLength(splittedLine) != m2C) {
             fprintf(stderr, "The file isn't valid.");
             exit(-1);
@@ -1007,7 +1031,41 @@ int main() {
         params[i].answerMatrix = (int *) answerMatrix;
     }
 
+    FILE *ansFile = fopen("ans.txt", "w");
+    if (!ansFile) {
+        fprintf(stderr, "Can't create answer file.");
+        exit(-1);
+    }
+
     // start of method 1:
+    begin = clock();
+
+    for (int i = 0; i < m1R; i++) {
+        currThread = i;
+        params[currThread].r = i;
+        pthread_create(threads_id + currThread, NULL, calRow, params + currThread);
+    }
+
+    for (int i = 0; i < m1R; i++) {
+        if (pthread_join(threads_id[i], NULL))
+            fprintf(stderr, "Some thing went wrong.");
+
+    }
+
+    end = clock();
+    time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+
+    fprintf(ansFile,"By Row\n");
+    for (int i = 0; i < m1R; i++) {
+        for (int j = 0; j < m2C; j++) {
+            fprintf(ansFile,"%d%c", answerMatrix[i][j], j == m2C - 1 ? '\n' : ' ');
+        }
+    }
+
+    fprintf(ansFile, "Time : %f s\n\n", time_spent);
+    // end of method 1.
+
+    // start of method 2:
     begin = clock();
     for (int i = 0; i < m1R; i++) {
         for (int j = 0; j < m2C; j++) {
@@ -1027,43 +1085,16 @@ int main() {
     end = clock();
     time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 
-    printf("Answer by first procedure:\n");
+    fprintf(ansFile, "By Element\n");
     for (int i = 0; i < m1R; i++) {
         for (int j = 0; j < m2C; j++) {
-            printf("%d%c", answerMatrix[i][j], j == m2C - 1 ? '\n' : ' ');
+            fprintf(ansFile,"%d%c", answerMatrix[i][j], j == m2C - 1 ? '\n' : ' ');
         }
     }
 
-    printf("Time spent: %f s\n\n", time_spent);
-    // finish of method 1.
+    fprintf(ansFile, "Time : %f s", time_spent);
+    // finish of method 2.
 
-    // start of method 2:
-    begin = clock();
-
-    for (int i = 0; i < m1R; i++) {
-        currThread = i;
-        params[currThread].r = i;
-        pthread_create(threads_id + currThread, NULL, calRow, params + currThread);
-    }
-
-    for (int i = 0; i < m1R; i++) {
-        if (pthread_join(threads_id[i], NULL))
-            fprintf(stderr, "Some thing went wrong.");
-
-    }
-
-    end = clock();
-    time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-
-    printf("Answer by second procedure:\n");
-    for (int i = 0; i < m1R; i++) {
-        for (int j = 0; j < m2C; j++) {
-            printf("%d%c", answerMatrix[i][j], j == m2C - 1 ? '\n' : ' ');
-        }
-    }
-
-    printf("Time spent: %f s\n", time_spent);
-    // end of method 2.
-
+    fclose(ansFile);
     return 0;
 }
